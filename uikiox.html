@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVIL BREAK V1.0 - BY VANQOO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="glitch" data-text="DEVIL BREAK">DEVIL BREAK</h1>
+            <p class="subtitle">[ KERNEL_V1.0_BY_VANQOO ]</p>
+        </header>
+
+        <div class="main-card">
+            <div class="input-box">
+                <label>NOMOR TARGET (FORMAT: 628xxx)</label>
+                <input type="text" id="target" placeholder="Contoh: 628571234567" inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                <small>*Otomatis hapus simbol + atau -</small>
+            </div>
+
+            <div class="input-box">
+                <label>LINK GRUP (WA/TELE)</label>
+                <input type="text" id="group_link" placeholder="chat.whatsapp.com/xxx atau t.me/xxx">
+            </div>
+
+            <div class="input-box">
+                <label>JUMLAH BLITZ (AMOUNT)</label>
+                <input type="number" id="amount" value="50">
+            </div>
+
+            <div class="input-box">
+                <label>WEAPON SELECTION</label>
+                <select id="type">
+                    <optgroup label="--- WHATSAPP SPECIAL ---">
+                        <option value="wa_force">WA: FORCECLOSE INVISIBLE</option>
+                        <option value="wa_group">WA: GROUP DESTROYER</option>
+                        <option value="wa_banned">WA: MASS REPORT (BAN)</option>
+                    </optgroup>
+                    <optgroup label="--- TELEGRAM SPECIAL ---">
+                        <option value="tele_crash">TELE: UI CRASH & DELAY</option>
+                        <option value="tele_group">TELE: GROUP SLAYER</option>
+                        <option value="tele_banned">TELE: ACCOUNT SUSPENSION</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <button onclick="executeAttack()">⚡ EXECUTE ATTACK</button>
+            <button class="btn-scan" onclick="scanGroups()">🔍 SCAN SENDER GROUPS</button>
+        </div>
+
+        <div class="console-box">
+            <div class="console-header">
+                <span>SYSTEM_LOG</span>
+                <span class="status-blink">ACTIVE</span>
+            </div>
+            <div id="logConsole" class="log-content">
+                [SYSTEM] Awaiting orders from VANQOO...
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
